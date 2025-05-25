@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/psychologists.css" />
+    <script src="scripts/general.js" defer></script>
+    <title>Наши психологи</title>
+  </head>
+  <body>
+    <header>
+      <!--Верхушка сайта-->
+      <div class="logo-container">
+        <img src="img/logo.png" alt="Логотип" />
+        <a href="index.html">Душевная лавка</a>
+      </div>
+      <div class="search-container">
+        <input type="search" placeholder="Поиск" />
+      </div>
+      <button class="auth-container">Вход/Регистрация</button>
+    </header>
+
+    <main>
+      <section class="sidebar">
+        <!--Секция с навигацией и рекламой-->
+        <nav>
+          <!--Навигация-->
+          <button class="nav-button">Навигация</button>
+          <ul id="nav-menu">
+            <li><a href="psychologists.html">Наши психологи</a></li>
+            <li><a href="articles.html">Статьи</a></li>
+            <li><a href="questions.html">Мои вопросы и ответы</a></li>
+            <li><a href="centers.html">Психологические центры</a></li>
+          </ul>
+        </nav>
+
+        <aside>
+          <!--Реклама-->
+          <h3>Курс "Саморазвитие"</h3>
+          <img src="img/advertisement.jpg" alt="Курс саморазвития" />
+          <p>Узнайте, как преодолеть тревожность и начать жить полной жизнью</p>
+          <button class="ad-button">Подробнее</button>
+        </aside>
+      </section>
+
+      <section class="content">
+        <!--Секция "Наши психологи"-->
+        <h2>Наши психологи</h2>
+        <div class="psychologists-grid">
+          <div class="psychologist-card">
+            <img src="img/psycholog-1.jpg" alt="Фото психолога" />
+            <h3>Анна Смирнова</h3>
+            <p>Психолог с 10-летним опытом.</p>
+            <p><strong>Электронная почта:</strong><br />email@example.com</p>
+          </div>
+          <div class="psychologist-card">
+            <img src="img/psycholog-2.jpg" alt="Фото психолога" />
+            <h3>Елена Лебедева</h3>
+            <p>Психолог с 10-летним опытом.</p>
+            <p><strong>Электронная почта:</strong><br />email@example.com</p>
+          </div>
+          <div class="psychologist-card">
+            <img src="img/psycholog-3.jpg" alt="Фото психолога" />
+            <h3>Марина Кузнецова</h3>
+            <p>Психолог с 10-летним опытом.</p>
+            <p><strong>Электронная почта:</strong><br />email@example.com</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!--Нижняя часть сайта-->
+      <ul>
+        <li><a href="#">Полезные ресурсы</a></li>
+        <li><a href="#">Обратная связь</a></li>
+        <li><a href="#">Условия использования</a></li>
+        <li><a href="#">8 800 222 55 71</a></li>
+      </ul>
+      <div class="logo-container">
+        <img src="img/logo.png" alt="Логотип" />
+        <a href="index.html"
+          >Душевная лавка | Студенты: Юлия Стяжкова; Юлия Полушина; Ксения
+          Медведева; Ралина Аптуллина</a
+        >
+      </div>
+    </footer>
+
+    <div class="modal-overlay" id="authModal">
+      <div class="auth-form" id="loginForm">
+        <!--Модальное окно с авторизацией-->
+        <h2>Вход</h2>
+        <label>Введите почту:</label>
+        <input type="email" placeholder="Почта" />
+        <label>Введите пароль:</label>
+        <input type="password" placeholder="Пароль" />
+        <button>Войти</button>
+        <button class="switch" onclick="switchToRegister()">
+          Нет учётной записи?
+        </button>
+      </div>
+
+      <div class="auth-form" id="registerForm" style="display: none">
+        <!--Модальное окно с регистрацией-->
+        <h2>Регистрация</h2>
+        <label>Введите имя и фамилию:</label>
+        <input type="text" placeholder="Имя, фамилия" />
+        <label>Введите почту:</label>
+        <input type="email" placeholder="Почта" />
+        <label>Введите пароль:</label>
+        <input type="password" placeholder="Придумайте пароль" />
+        <label>Повторите пароль:</label>
+        <input type="password" placeholder="Повторите пароль" />
+        <button>Зарегистрироваться</button>
+        <button class="switch" onclick="switchToLogin()">
+          Уже есть учетная запись?
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

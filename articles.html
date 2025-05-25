@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/articles.css" />
+    <script src="scripts/general.js" defer></script>
+    <title>Статьи</title>
+  </head>
+  <body>
+    <header>
+      <!--Верхушка сайта-->
+      <div class="logo-container">
+        <img src="img/logo.png" alt="Логотип" />
+        <a href="index.html">Душевная лавка</a>
+      </div>
+      <div class="search-container">
+        <input type="search" placeholder="Поиск" />
+      </div>
+      <button class="auth-container">Вход/Регистрация</button>
+    </header>
+
+    <main>
+      <section class="sidebar">
+        <!--Секция с навигацией и рекламой-->
+        <nav>
+          <!--Навигация-->
+          <button class="nav-button">Навигация</button>
+          <ul id="nav-menu">
+            <li><a href="psychologists.html">Наши психологи</a></li>
+            <li><a href="articles.html">Статьи</a></li>
+            <li><a href="questions.html">Мои вопросы и ответы</a></li>
+            <li><a href="centers.html">Психологические центры</a></li>
+          </ul>
+        </nav>
+
+        <aside>
+          <!--Реклама-->
+          <h3>Курс "Саморазвитие"</h3>
+          <img src="img/advertisement.jpg" alt="Курс саморазвития" />
+          <p>Узнайте, как преодолеть тревожность и начать жить полной жизнью</p>
+          <button class="ad-button">Подробнее</button>
+        </aside>
+      </section>
+
+      <section class="content">
+        <!--Секция, содержащая статьи-->
+        <h2>Статьи</h2>
+        <div class="articles-grid">
+          <div class="article-card large">
+            <div class="article-header">
+              <div class="article-avatar">АП</div>
+              <div>
+                <h3>Алексей Петров</h3>
+                <div class="article-date">5 мая 2025</div>
+              </div>
+            </div>
+            <div class="article-content">
+              <p>
+                Тревога и стресс часто сопровождают нас в повседневной жизни.
+                Важно уметь распознавать эти состояния и принимать меры.
+              </p>
+            </div>
+          </div>
+
+          <div class="article-card">
+            <div class="article-header">
+              <div class="article-avatar">ЕС</div>
+              <div>
+                <h3>Елена Соколова</h3>
+                <div class="article-date">1 мая 2025</div>
+              </div>
+            </div>
+            <div class="article-content">
+              <p>
+                Регулярная медитация помогает нам обрести внутреннее
+                спокойствие. Это простой и доступный инструмент для всех.
+              </p>
+              <img src="img/meditation.jpg" alt="Медитация" />
+            </div>
+          </div>
+
+          <div class="article-card">
+            <div class="article-header">
+              <div class="article-avatar">НС</div>
+              <div>
+                <h3>Наталья Сергеевна</h3>
+                <div class="article-date">28 апреля 2025</div>
+              </div>
+            </div>
+            <div class="article-content">
+              <p>
+                Важно говорить о своих чувствах и переживаниях. Поддержка
+                близких и специалистов помогает преодолевать трудности.
+              </p>
+            </div>
+          </div>
+
+          <div class="article-card">
+            <div class="article-header">
+              <div class="article-avatar">ИН</div>
+              <div>
+                <h3>Иван Никитин</h3>
+                <div class="article-date">25 апреля 2025</div>
+              </div>
+            </div>
+            <div class="article-content">
+              <p>
+                Психологическая гигиена важна в ежедневной практике. Она
+                помогает сохранять эмоциональное равновесие.
+              </p>
+            </div>
+          </div>
+
+          <div class="article-card large">
+            <div class="article-header">
+              <div class="article-avatar">ДА</div>
+              <div>
+                <h3>Дарья Алексеева</h3>
+                <div class="article-date">18 апреля 2025</div>
+              </div>
+            </div>
+            <div class="article-content">
+              <p>
+                Осознанность — ключ к внутреннему балансу. Попробуйте уделять по
+                5 минут в день на практику внимательности.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!--Нижняя часть сайта-->
+      <ul>
+        <li><a href="#">Полезные ресурсы</a></li>
+        <li><a href="#">Обратная связь</a></li>
+        <li><a href="#">Условия использования</a></li>
+        <li><a href="#">8 800 222 55 71</a></li>
+      </ul>
+      <div class="logo-container">
+        <img src="img/logo.png" alt="Логотип" />
+        <a href="index.html"
+          >Душевная лавка | Студенты: Юлия Стяжкова; Юлия Полушина; Ксения
+          Медведева; Ралина Аптуллина</a
+        >
+      </div>
+    </footer>
+
+    <div class="modal-overlay" id="authModal">
+      <div class="auth-form" id="loginForm">
+        <!--Модальное окно с авторизацией-->
+        <h2>Вход</h2>
+        <label>Введите почту:</label>
+        <input type="email" placeholder="Почта" />
+        <label>Введите пароль:</label>
+        <input type="password" placeholder="Пароль" />
+        <button>Войти</button>
+        <button class="switch" onclick="switchToRegister()">
+          Нет учётной записи?
+        </button>
+      </div>
+
+      <div class="auth-form" id="registerForm" style="display: none">
+        <!--Модальное окно с регистрацией-->
+        <h2>Регистрация</h2>
+        <label>Введите имя и фамилию:</label>
+        <input type="text" placeholder="Имя, фамилия" />
+        <label>Введите почту:</label>
+        <input type="email" placeholder="Почта" />
+        <label>Введите пароль:</label>
+        <input type="password" placeholder="Придумайте пароль" />
+        <label>Повторите пароль:</label>
+        <input type="password" placeholder="Повторите пароль" />
+        <button>Зарегистрироваться</button>
+        <button class="switch" onclick="switchToLogin()">
+          Уже есть учетная запись?
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
