@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/psychologists.css" />
-    <script src="scripts/general.js" defer></script>
+    <script src="scripts/script.js" defer></script>
     <title>Наши психологи</title>
   </head>
   <body>
@@ -20,6 +20,8 @@
       </div>
       <button class="auth-container">Вход/Регистрация</button>
     </header>
+
+    <div id="preloader">Загрузка...</div>
 
     <main>
       <section class="sidebar">
@@ -47,21 +49,42 @@
       <section class="content">
         <!--Секция "Наши психологи"-->
         <h2>Наши психологи</h2>
+        <div class="filter-container">
+          <label for="city-filter">Выберите город:</label>
+          <select id="city-filter">
+            <option value="all">Все</option>
+            <option value="Москва">Москва</option>
+            <option value="Санкт-Петербург">Санкт-Петербург</option>
+            <option value="Новосибирск">Новосибирск</option>
+          </select>
+        </div>
         <div class="psychologists-grid">
-          <div class="psychologist-card">
-            <img src="img/psycholog-1.jpg" alt="Фото психолога" />
+          <div class="psychologist-card" data-city="Москва">
+            <img
+              src="img/psycholog-1.jpg"
+              alt="Фото психолога"
+              class="post-image"
+            />
             <h3>Анна Смирнова</h3>
             <p>Психолог с 10-летним опытом.</p>
             <p><strong>Электронная почта:</strong><br />email@example.com</p>
           </div>
-          <div class="psychologist-card">
-            <img src="img/psycholog-2.jpg" alt="Фото психолога" />
+          <div class="psychologist-card" data-city="Санкт-Петербург">
+            <img
+              src="img/psycholog-2.jpg"
+              alt="Фото психолога"
+              class="post-image"
+            />
             <h3>Елена Лебедева</h3>
             <p>Психолог с 10-летним опытом.</p>
             <p><strong>Электронная почта:</strong><br />email@example.com</p>
           </div>
-          <div class="psychologist-card">
-            <img src="img/psycholog-3.jpg" alt="Фото психолога" />
+          <div class="psychologist-card" data-city="Новосибирск">
+            <img
+              src="img/psycholog-3.jpg"
+              alt="Фото психолога"
+              class="post-image"
+            />
             <h3>Марина Кузнецова</h3>
             <p>Психолог с 10-летним опытом.</p>
             <p><strong>Электронная почта:</strong><br />email@example.com</p>
@@ -69,6 +92,8 @@
         </div>
       </section>
     </main>
+
+    <button id="scrollTopBtn">Наверх</button>
 
     <footer>
       <!--Нижняя часть сайта-->

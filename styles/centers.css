@@ -1,20 +1,20 @@
-    .centers-container {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-    }
+.centers-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
 
-    .center-card {
-      background-color: #f5eee5;
-      border: 2px solid #e0d2c0;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+.center-card {
+  background-color: #f5eee5;
+  border: 2px solid #e0d2c0;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    .center-card h3 {
-      margin-top: 0;
-    }
+.center-card h3 {
+  margin-top: 0;
+}

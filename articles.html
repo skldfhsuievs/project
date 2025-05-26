@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/articles.css" />
-    <script src="scripts/general.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="scripts/script.js" defer></script>
     <title>Статьи</title>
   </head>
   <body>
@@ -20,6 +28,8 @@
       </div>
       <button class="auth-container">Вход/Регистрация</button>
     </header>
+
+    <div id="preloader">Загрузка...</div>
 
     <main>
       <section class="sidebar">
@@ -47,90 +57,114 @@
       <section class="content">
         <!--Секция, содержащая статьи-->
         <h2>Статьи</h2>
-        <div class="articles-grid">
-          <div class="article-card large">
-            <div class="article-header">
-              <div class="article-avatar">АП</div>
-              <div>
-                <h3>Алексей Петров</h3>
-                <div class="article-date">5 мая 2025</div>
+        <!-- Карусель -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Слайды -->
+            <div class="swiper-slide">
+              <div class="article-card">
+                <div class="article-header">
+                  <div class="article-avatar">АП</div>
+                  <div>
+                    <h3>Алексей Петров</h3>
+                    <div class="article-date">5 мая 2025</div>
+                  </div>
+                </div>
+                <div class="article-content">
+                  <p>
+                    Тревога и стресс часто сопровождают нас в повседневной
+                    жизни. Важно уметь распознавать эти состояния и принимать
+                    меры.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="article-content">
-              <p>
-                Тревога и стресс часто сопровождают нас в повседневной жизни.
-                Важно уметь распознавать эти состояния и принимать меры.
-              </p>
+
+            <div class="swiper-slide">
+              <div class="article-card">
+                <div class="article-header">
+                  <div class="article-avatar">ЕС</div>
+                  <div>
+                    <h3>Елена Соколова</h3>
+                    <div class="article-date">1 мая 2025</div>
+                  </div>
+                </div>
+                <div class="article-content">
+                  <p>
+                    Регулярная медитация помогает нам обрести внутреннее
+                    спокойствие.
+                  </p>
+                  <img src="img/meditation.jpg" alt="Медитация" />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="article-card">
+                <div class="article-header">
+                  <div class="article-avatar">НС</div>
+                  <div>
+                    <h3>Наталья Сергеевна</h3>
+                    <div class="article-date">28 апреля 2025</div>
+                  </div>
+                </div>
+                <div class="article-content">
+                  <p>
+                    Важно говорить о своих чувствах и переживаниях. Поддержка
+                    близких и специалистов помогает преодолевать трудности.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="article-card">
+                <div class="article-header">
+                  <div class="article-avatar">ИН</div>
+                  <div>
+                    <h3>Иван Никитин</h3>
+                    <div class="article-date">25 апреля 2025</div>
+                  </div>
+                </div>
+                <div class="article-content">
+                  <p>
+                    Психологическая гигиена важна в ежедневной практике. Она
+                    помогает сохранять эмоциональное равновесие.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="article-card">
+                <div class="article-header">
+                  <div class="article-avatar">ДА</div>
+                  <div>
+                    <h3>Дарья Алексеева</h3>
+                    <div class="article-date">18 апреля 2025</div>
+                  </div>
+                </div>
+                <div class="article-content">
+                  <p>
+                    Осознанность — ключ к внутреннему балансу. Попробуйте
+                    уделять по 5 минут в день на практику внимательности.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="article-card">
-            <div class="article-header">
-              <div class="article-avatar">ЕС</div>
-              <div>
-                <h3>Елена Соколова</h3>
-                <div class="article-date">1 мая 2025</div>
-              </div>
-            </div>
-            <div class="article-content">
-              <p>
-                Регулярная медитация помогает нам обрести внутреннее
-                спокойствие. Это простой и доступный инструмент для всех.
-              </p>
-              <img src="img/meditation.jpg" alt="Медитация" />
-            </div>
-          </div>
-
-          <div class="article-card">
-            <div class="article-header">
-              <div class="article-avatar">НС</div>
-              <div>
-                <h3>Наталья Сергеевна</h3>
-                <div class="article-date">28 апреля 2025</div>
-              </div>
-            </div>
-            <div class="article-content">
-              <p>
-                Важно говорить о своих чувствах и переживаниях. Поддержка
-                близких и специалистов помогает преодолевать трудности.
-              </p>
-            </div>
-          </div>
-
-          <div class="article-card">
-            <div class="article-header">
-              <div class="article-avatar">ИН</div>
-              <div>
-                <h3>Иван Никитин</h3>
-                <div class="article-date">25 апреля 2025</div>
-              </div>
-            </div>
-            <div class="article-content">
-              <p>
-                Психологическая гигиена важна в ежедневной практике. Она
-                помогает сохранять эмоциональное равновесие.
-              </p>
-            </div>
-          </div>
-
-          <div class="article-card large">
-            <div class="article-header">
-              <div class="article-avatar">ДА</div>
-              <div>
-                <h3>Дарья Алексеева</h3>
-                <div class="article-date">18 апреля 2025</div>
-              </div>
-            </div>
-            <div class="article-content">
-              <p>
-                Осознанность — ключ к внутреннему балансу. Попробуйте уделять по
-                5 минут в день на практику внимательности.
-              </p>
-            </div>
+          <!-- Элементы управления -->
+          <div class="swiper-controls">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
       </section>
     </main>
+
+    <button id="scrollTopBtn">Наверх</button>
 
     <footer>
       <!--Нижняя часть сайта-->
